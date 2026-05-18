@@ -1,10 +1,123 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Student Cover Insurance</title>
-  </head>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Cover Insurance - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            background: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: #004080;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .hero {
+            background: #f0f4f8;
+            padding: 50px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        .features {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .feature-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+            text-align: center;
+        }
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+            }
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
     <h1>Student Cover Insurance</h1>
-    <p>A cover for students, by students</p>
-  </body>
+    <p>Insurance for students, by students</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="cover-plans.html">Cover Plans</a>
+    <a href="quote.html">Get a Quote</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+    <div class="hero">
+        <h2>Protect Your Gadgets. Focus on Your Studies.</h2>
+        <p>Affordable insurance for laptops, smartphones, and tablets starting from just P50/month.</p>
+        <p style="margin-top: 20px;">✅ Theft Protection | ✅ Accidental Damage | ✅ Fast Claims</p>
+    </div>
+
+    <h2>Why Choose Student Cover?</h2>
+    <div class="features">
+        <div class="feature-card">
+            <h3>🎓 Student Budgets</h3>
+            <p>Plans designed specifically for students. No hidden fees.</p>
+        </div>
+        <div class="feature-card">
+            <h3>⚡ Simple Claims</h3>
+            <p>Submit your claim online. Get approved within 48 hours.</p>
+        </div>
+        <div class="feature-card">
+            <h3>📱 All Devices</h3>
+            <p>Laptops, phones, tablets, and accessories all covered.</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Student Cover Insurance | Email: hello@studentcover.co.bw</p>
+</footer>
+
+</body>
 </html>
