@@ -1,1 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Cover Insurance - Cover Plans</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            background: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: #004080;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .plans {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .plan-card {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .price {
+            font-size: 28px;
+            color: #003366;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #003366;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .plans {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
 
+<header>
+    <h1>Student Cover Insurance</h1>
+    <p>Insurance for students, by students</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="cover-plans.html">Cover Plans</a>
+    <a href="quote.html">Get a Quote</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+    <h2>Our Cover Plans</h2>
+    <p>Choose the plan that fits your needs and budget.</p>
+
+    <div class="plans">
+        <div class="plan-card">
+            <h3>Basic Plan</h3>
+            <div class="price">P50/month</div>
+            <ul style="text-align: left; padding-left: 20px;">
+                <li>Laptop only</li>
+                <li>Accidental damage cover</li>
+                <li>Claim limit: P3,000</li>
+            </ul>
+            <a href="quote.html" class="btn">Get Quote</a>
+        </div>
+
+        <div class="plan-card">
+            <h3>Standard Plan</h3>
+            <div class="price">P90/month</div>
+            <ul style="text-align: left; padding-left: 20px;">
+                <li>Laptop + Phone</li>
+                <li>Theft + accidental damage</li>
+                <li>Claim limit: P6,000</li>
+            </ul>
+            <a href="quote.html" class="btn">Get Quote</a>
+        </div>
+
+        <div class="plan-card">
+            <h3>Premium Plan</h3>
+            <div class="price">P150/month</div>
+            <ul style="text-align: left; padding-left: 20px;">
+                <li>Laptop + Phone + Tablet</li>
+                <li>Full coverage (theft, damage, loss)</li>
+                <li>Claim limit: P12,000</li>
+            </ul>
+            <a href="quote.html" class="btn">Get Quote</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Student Cover Insurance | Email: hello@studentcover.co.bw</p>
+</footer>
+
+</body>
+</html>
