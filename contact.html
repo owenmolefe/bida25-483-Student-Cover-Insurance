@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Cover Insurance - Contact & About</title>
+    <title>Student Cover - Contact & About</title>
     <style>
         * {
             margin: 0;
@@ -12,7 +12,6 @@
         }
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
         }
         header {
             background: #003366;
@@ -31,61 +30,36 @@
             text-decoration: none;
             font-weight: bold;
         }
-        nav a:hover {
-            text-decoration: underline;
-        }
         main {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
-        .container {
+        .row {
             display: flex;
-            gap: 40px;
+            gap: 30px;
             flex-wrap: wrap;
         }
-        .about-section {
+        .about-box, .contact-box {
             flex: 1;
-            background: #f9f9f9;
+            background: #f0f4f8;
             padding: 25px;
             border-radius: 10px;
-        }
-        .contact-section {
-            flex: 1;
-            background: #f9f9f9;
-            padding: 25px;
-            border-radius: 10px;
-        }
-        .contact-details {
-            margin: 20px 0;
-        }
-        .contact-details p {
-            margin: 10px 0;
-        }
-        label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
         }
         input, textarea {
             width: 100%;
             padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ddd;
+            margin: 10px 0;
+            border: 1px solid #ccc;
             border-radius: 5px;
         }
         button {
             background: #003366;
             color: white;
-            padding: 12px 25px;
+            padding: 10px 20px;
             border: none;
             border-radius: 5px;
-            margin-top: 20px;
             cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background: #002244;
         }
         footer {
             background: #003366;
@@ -93,19 +67,6 @@
             text-align: center;
             padding: 20px;
             margin-top: 40px;
-        }
-        h2 {
-            margin-bottom: 20px;
-            color: #003366;
-        }
-        h3 {
-            margin-bottom: 10px;
-            color: #003366;
-        }
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
         }
     </style>
 </head>
@@ -126,60 +87,64 @@
 
 <main>
     <h2>About Us & Contact</h2>
-
-    <div class="container">
-        <!-- About Us Section -->
-        <div class="about-section">
-            <h3>About Student Cover Insurance</h3>
-            <p>Student Cover Insurance was founded by students, for students. We understand the challenges of university life and how expensive it can be to replace a stolen or damaged laptop, phone, or tablet.</p>
-            <p style="margin-top: 15px;">Our mission is to provide affordable, simple, and reliable gadget insurance that fits a student's budget. No hidden fees. No complicated forms. Just protection when you need it most.</p>
-            <p style="margin-top: 15px;">We are based in Gaborone, Botswana and serve students across all major universities and colleges.</p>
-            
-            <h3 style="margin-top: 25px;">Why Choose Us?</h3>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-                <li>✅ Affordable plans from P50/month</li>
-                <li>✅ Fast claims processing within 48 hours</li>
-                <li>✅ Cover for theft, accidental damage, and loss</li>
-                <li>✅ Student-friendly customer support</li>
+    <div class="row">
+        <div class="about-box">
+            <h3>About Student Cover</h3>
+            <p>We are a student-focused insurance provider based in Botswana. Our mission is to make gadget insurance affordable and simple for all students.</p>
+            <p style="margin-top: 15px;">We cover laptops, smartphones, tablets, and accessories. Plans start from just P50 per month.</p>
+            <p style="margin-top: 15px;"><strong>Why choose us?</strong></p>
+            <ul style="margin-left: 20px;">
+                <li>Affordable student budgets</li>
+                <li>Fast claims processing</li>
+                <li>No hidden fees</li>
             </ul>
         </div>
 
-        <!-- Contact Section -->
-        <div class="contact-section">
-            <h3>Get in Touch</h3>
-            
-            <div class="contact-details">
-                <p>📧 <strong>Email:</strong> hello@studentcover.co.bw</p>
-                <p>📞 <strong>Phone:</strong> +267 71 234 567</p>
-                <p>📍 <strong>Location:</strong> Gaborone, Botswana</p>
-                <p>🕒 <strong>Hours:</strong> Monday - Friday, 9am - 5pm</p>
-                <p>📱 <strong>Social:</strong> @studentcover (Instagram, Facebook, Twitter)</p>
-            </div>
+        <div class="contact-box">
+            <h3>Contact Information</h3>
+            <p><strong>Email:</strong> hello@studentcover.co.bw</p>
+            <p><strong>Phone:</strong> +267 71 234 567</p>
+            <p><strong>Location:</strong> Gaborone, Botswana</p>
+            <p><strong>Hours:</strong> Mon-Fri, 9am-5pm</p>
 
-            <h3>Send Us a Message</h3>
-            <form action="#" method="post">
-                <label for="name">Full Name *</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject">
-
-                <label for="message">Message *</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
+            <h3 style="margin-top: 20px;">Send a Message</h3>
+            <form id="contactForm">
+                <input type="text" id="contactName" placeholder="Your Name" required>
+                <input type="email" id="contactEmail" placeholder="Your Email" required>
+                <textarea id="contactMsg" rows="4" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
-            <p style="margin-top: 10px; font-size: 12px; color: #666;">* Required fields</p>
+            <div id="contactResponse" style="margin-top: 15px; padding: 10px; border-radius: 5px; display: none;"></div>
         </div>
     </div>
 </main>
 
 <footer>
-    <p>&copy; 2026 Student Cover Insurance | Email: hello@studentcover.co.bw</p>
+    <p>&copy; 2026 Student Cover Insurance | hello@studentcover.co.bw</p>
 </footer>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        let name = document.getElementById('contactName').value;
+        let email = document.getElementById('contactEmail').value;
+        let message = document.getElementById('contactMsg').value;
+        
+        if (name === "" || email === "" || message === "") {
+            alert("Please fill in all fields before sending.");
+            return;
+        }
+        
+        let responseDiv = document.getElementById('contactResponse');
+        responseDiv.innerHTML = "✅ Thanks, " + name + "! We've received your message at " + email + " and will reply within 24 hours.";
+        responseDiv.style.backgroundColor = "#d4edda";
+        responseDiv.style.color = "#155724";
+        responseDiv.style.display = "block";
+        
+        document.getElementById('contactForm').reset();
+    });
+</script>
 
 </body>
 </html>
