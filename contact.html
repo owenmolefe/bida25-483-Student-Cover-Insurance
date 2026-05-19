@@ -3,80 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Cover - Contact & About</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background: #003366;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background: #004080;
-            padding: 15px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        main {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .row {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-        .about-box, .contact-box {
-            flex: 1;
-            background: #f0f4f8;
-            padding: 25px;
-            border-radius: 10px;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            background: #003366;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        footer {
-            background: #003366;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-    </style>
+    <title>Student Cover Insurance - Contact & About</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-    <h1>📱 Student Cover Insurance 💻</h1>
+<header>
+    <h1>Student Cover Insurance</h1>
     <p>Insurance for students, by students</p>
 </header>
-    
+
 <nav>
     <a href="index.html">Home</a>
     <a href="cover-plans.html">Cover Plans</a>
@@ -87,13 +23,14 @@
 
 <main>
     <h2>About Us & Contact</h2>
-    <div class="row">
+
+    <div class="contact-row">
         <div class="about-box">
             <h3>About Student Cover</h3>
             <p>We are a student-focused insurance provider based in Botswana. Our mission is to make gadget insurance affordable and simple for all students.</p>
-            <p style="margin-top: 15px;">We cover laptops, smartphones, tablets, and accessories. Plans start from just P50 per month.</p>
-            <p style="margin-top: 15px;"><strong>Why choose us?</strong></p>
-            <ul style="margin-left: 20px;">
+            <p>We cover laptops, smartphones, tablets, and accessories. Plans start from just P50 per month.</p>
+            <p><strong>Why choose us?</strong></p>
+            <ul>
                 <li>Affordable student budgets</li>
                 <li>Fast claims processing</li>
                 <li>No hidden fees</li>
@@ -107,20 +44,20 @@
             <p><strong>Location:</strong> Gaborone, Botswana</p>
             <p><strong>Hours:</strong> Mon-Fri, 9am-5pm</p>
 
-            <h3 style="margin-top: 20px;">Send a Message</h3>
+            <h3>Send a Message</h3>
             <form id="contactForm">
                 <input type="text" id="contactName" placeholder="Your Name" required>
                 <input type="email" id="contactEmail" placeholder="Your Email" required>
                 <textarea id="contactMsg" rows="4" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
-            <div id="contactResponse" style="margin-top: 15px; padding: 10px; border-radius: 5px; display: none;"></div>
+            <div id="contactResponse" class="message-box" style="display: none;"></div>
         </div>
     </div>
 </main>
 
 <footer>
-    <p>&copy; 2026 Student Cover Insurance | hello@studentcover.co.bw</p>
+    <p>&copy; 2026 Student Cover Insurance | Email: hello@studentcover.co.bw</p>
 </footer>
 
 <script>
@@ -138,8 +75,6 @@
         
         let responseDiv = document.getElementById('contactResponse');
         responseDiv.innerHTML = "✅ Thanks, " + name + "! We've received your message at " + email + " and will reply within 24 hours.";
-        responseDiv.style.backgroundColor = "#d4edda";
-        responseDiv.style.color = "#155724";
         responseDiv.style.display = "block";
         
         document.getElementById('contactForm').reset();
