@@ -3,80 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Cover - Get a Quote</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background: #003366;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background: #004080;
-            padding: 15px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        main {
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        form {
-            background: #f0f4f8;
-            padding: 30px;
-            border-radius: 10px;
-        }
-        label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-        input, select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            background: #003366;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-        footer {
-            background: #003366;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-    </style>
+    <title>Student Cover Insurance - Get a Quote</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-header>
-    <h1>📱 Student Cover Insurance 💻</h1>
+<header>
+    <h1>Student Cover Insurance</h1>
     <p>Insurance for students, by students</p>
 </header>
-    
+
 <nav>
     <a href="index.html">Home</a>
     <a href="cover-plans.html">Cover Plans</a>
@@ -122,7 +58,7 @@ header>
         <button type="submit">Submit Quote Request</button>
     </form>
 
-    <div id="confirmationMessage" style="margin-top: 20px; padding: 15px; border-radius: 5px; display: none;"></div>
+    <div id="confirmationMessage" class="message-box" style="display: none;"></div>
 </main>
 
 <footer>
@@ -131,31 +67,23 @@ header>
 
 <script>
     document.getElementById('quoteForm').addEventListener('submit', function(event) {
-        event.preventDefault();  // Prevents page from reloading
+        event.preventDefault();
         
-        // Get values from form
         let name = document.getElementById('fullName').value;
         let email = document.getElementById('email').value;
         let device = document.getElementById('device').value;
         let plan = document.getElementById('plan').value;
         
-        // Check if required fields are empty
         if (name === "" || email === "" || device === "" || plan === "") {
             alert("Please fill in all required fields.");
             return;
         }
         
-        // Show success message
         let messageDiv = document.getElementById('confirmationMessage');
         messageDiv.innerHTML = "✅ Thank you, " + name + "! Your quote request has been sent to " + email + ". We'll contact you within 24 hours about the " + plan + " plan for your " + device + ".";
-        messageDiv.style.backgroundColor = "#d4edda";
-        messageDiv.style.color = "#155724";
         messageDiv.style.display = "block";
         
-        // Clear the form (optional)
         document.getElementById('quoteForm').reset();
-        
-        // Scroll to message
         messageDiv.scrollIntoView({ behavior: 'smooth' });
     });
 </script>
